@@ -1,2 +1,2 @@
 # TrustNoOne-BGJ26
-A detective game where you find the culprit by talking to suspects and inspecting clues!
+An anomaly game where you question people to figure out if they are human or not. 
