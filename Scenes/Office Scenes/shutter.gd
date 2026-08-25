@@ -29,12 +29,12 @@ func Shutter_Animation():
 	
 	# Move shutter to close (pos.y = 125.0)
 	if Shutter_closed:
-		while $"Shutter Sprite".global_position.y < -125.0:
-			$"Shutter Sprite".global_position.y -= SPEED
-			print("Close")
+		print($"Shutter Sprite".global_position.y)
+		$"Shutter Sprite".global_position.y += 225.0
+		print($"Shutter Sprite".global_position.y)
 	
 	# Move shutter to open (pos.y = 350.0)
 	elif !Shutter_closed:
-		while $"Shutter Sprite".position.y > -350.0:
-			$"Shutter Sprite".position.y += SPEED
-			print("Open")
+		print($"Shutter Sprite".global_position.y)
+		$"Shutter Sprite".global_position.y -= 225.0
+		print($"Shutter Sprite".global_position.y)
