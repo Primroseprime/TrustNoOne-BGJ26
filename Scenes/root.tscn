@@ -1,12 +1,5 @@
 [gd_scene format=3 uid="uid://busrn3geautsy"]
 
-[ext_resource type="Texture2D" uid="uid://de67irbi61q7g" path="res://Scenes/Office Scenes/Temp-Office Background.png" id="1_i04dx"]
+[node name="Root" type="Node2D" unique_id=619687857]
 
-[node name="Office Root" type="Node2D" unique_id=619687857]
-
-[node name="Temp-Camera" type="Camera2D" parent="." unique_id=2127689416]
-
-[node name="Background" type="Sprite2D" parent="." unique_id=835705051]
-position = Vector2(-2.2888184e-05, -2.3841858e-06)
-scale = Vector2(1.1659919, 0.8459529)
-texture = ExtResource("1_i04dx")
+[node name="Camera" type="Camera2D" parent="." unique_id=141920826]
