@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://dk6xkjfw8iedy"]
+
+[ext_resource type="Script" uid="uid://ch2uc6t8yn0ty" path="res://Scenes/Menu Scenes/Menus.gd" id="1_k3i67"]
+[ext_resource type="Texture2D" uid="uid://b10v5f0juvfi7" path="res://Scenes/Menu Scenes/Main Menu Scene/Main Menu Temp.png" id="1_yux0p"]
+[ext_resource type="PackedScene" uid="uid://blsamu8o0bf8l" path="res://Scenes/Universal Scenes/button.tscn" id="3_k3i67"]
+
+[node name="Menu Root" type="Node2D" unique_id=1418669982]
+script = ExtResource("1_k3i67")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1872396392]
+position = Vector2(1.5258789e-05, -3.8146973e-06)
+scale = Vector2(0.72, 0.72)
+texture = ExtResource("1_yux0p")
+
+[node name="Main Menu" type="Node" parent="." unique_id=1487204788]
+
+[node name="Play Button" type="Node" parent="Main Menu" unique_id=1267515954]
+
+[node name="Button Area" parent="Main Menu/Play Button" unique_id=32204986 instance=ExtResource("3_k3i67")]
+position = Vector2(3.999998, -137)
+scale = Vector2(34, 5.5)
+
+[node name="Options Button" type="Node" parent="Main Menu" unique_id=1057627972]
+
+[node name="Button Area" parent="Main Menu/Options Button" unique_id=53619395 instance=ExtResource("3_k3i67")]
+position = Vector2(-176, -16.000002)
+scale = Vector2(16, 5.5)
+
+[node name="Credits Button" type="Node" parent="Main Menu" unique_id=1527902838]
+
+[node name="Button Area" parent="Main Menu/Credits Button" unique_id=828220159 instance=ExtResource("3_k3i67")]
+position = Vector2(-442.00003, 279.99997)
+scale = Vector2(12.5, 3.4)
+
+[node name="Quit Button" type="Node" parent="Main Menu" unique_id=1304950779]
+
+[node name="Button Area" parent="Main Menu/Quit Button" unique_id=710831613 instance=ExtResource("3_k3i67")]
+position = Vector2(171.99998, -17.000002)
+scale = Vector2(17, 5.5)

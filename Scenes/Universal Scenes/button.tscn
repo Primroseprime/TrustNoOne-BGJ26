@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://blsamu8o0bf8l"]
+
+[ext_resource type="Script" uid="uid://v3utrtd0m32g" path="res://Scenes/Universal Scenes/button_script.gd" id="1_nu37u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4dr66"]
+
+[node name="Button Area" type="Area2D" unique_id=32204986]
+script = ExtResource("1_nu37u")
+
+[node name="Collision Shape" type="CollisionShape2D" parent="." unique_id=413550484]
+shape = SubResource("RectangleShape2D_4dr66")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
