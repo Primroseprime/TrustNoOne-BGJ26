@@ -12,8 +12,9 @@ func _ready() -> void:
 	$"Main Menu/Quit Button/Button Area".connect("Clicked", Quit)
 
 #Clicked Play -> Start Game
+signal Game_State_Play
 func Play():
-	pass
+	emit_signal("Game_State_Play")
 
 # Var for menus
 var Current_Menu = null
@@ -22,7 +23,6 @@ var Current_Menu = null
 func Options():
 	if Current_Menu != null:
 		return
-	
 	Current_Menu = Options_Scene.instantiate()
 	add_child(Current_Menu)
 	Disable_Main_Menu()
@@ -31,7 +31,6 @@ func Options():
 func Credits():
 	if Current_Menu != null:
 		return
-	
 	Current_Menu = Credits_Scene.instantiate()
 	add_child(Current_Menu)
 	Disable_Main_Menu()
