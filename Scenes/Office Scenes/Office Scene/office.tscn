@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://d7ueom841gag"]
 
-[ext_resource type="Script" uid="uid://c7oaby3d2puuh" path="res://Scenes/Office Scenes/Office/office.gd" id="1_bbr46"]
-[ext_resource type="Texture2D" uid="uid://de67irbi61q7g" path="res://Scenes/Office Scenes/Office/Temp-Office Background.png" id="1_xpyfn"]
-[ext_resource type="Script" uid="uid://hq12832svqie" path="res://Scenes/Office Scenes/Office/shutter.gd" id="2_bbr46"]
+[ext_resource type="Script" uid="uid://c7oaby3d2puuh" path="res://Scenes/Office Scenes/Office Scene/office.gd" id="1_bbr46"]
+[ext_resource type="Texture2D" uid="uid://de67irbi61q7g" path="res://Scenes/Office Scenes/Office Scene/Temp-Office Background.png" id="1_xpyfn"]
+[ext_resource type="Script" uid="uid://hq12832svqie" path="res://Scenes/Office Scenes/Office Scene/shutter.gd" id="2_bbr46"]
 [ext_resource type="Texture2D" uid="uid://j8my61f7tygl" path="res://Assets/icon.svg" id="3_n7dka"]
-[ext_resource type="Script" uid="uid://j0c3ncnhke55" path="res://Scenes/Office Scenes/Notes/notes.gd" id="4_1i3p8"]
+[ext_resource type="Script" uid="uid://j0c3ncnhke55" path="res://Scenes/Office Scenes/Note Scene/notes.gd" id="4_1i3p8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4lxjs"]
 size = Vector2(29, 48)
