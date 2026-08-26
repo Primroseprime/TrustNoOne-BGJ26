@@ -15,8 +15,6 @@ size = Vector2(229, 139)
 [node name="Office Root" type="Node2D" unique_id=619687857]
 script = ExtResource("1_bbr46")
 
-[node name="Temp-Camera" type="Camera2D" parent="." unique_id=2127689416]
-
 [node name="Background" type="Sprite2D" parent="." unique_id=835705051]
 position = Vector2(-2.2888184e-05, -2.3841858e-06)
 scale = Vector2(1.1659919, 0.8459529)

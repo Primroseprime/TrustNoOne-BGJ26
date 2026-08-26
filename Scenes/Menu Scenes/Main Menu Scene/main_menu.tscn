@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dk6xkjfw8iedy"]
+
+[ext_resource type="Script" uid="uid://ch2uc6t8yn0ty" path="res://Scenes/Menu Scenes/Menus.gd" id="1_k3i67"]
+[ext_resource type="Texture2D" uid="uid://b10v5f0juvfi7" path="res://Scenes/Menu Scenes/Main Menu Scene/Main Menu Temp.png" id="1_yux0p"]
+[ext_resource type="Script" uid="uid://bq4w4fvq3yukt" path="res://Scenes/Menu Scenes/Main Menu Scene/credits button.gd" id="2_rt6rt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k3i67"]
+size = Vector2(355.5555, 102.77785)
+
+[node name="Menu Root" type="Node2D" unique_id=1418669982]
+script = ExtResource("1_k3i67")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1872396392]
+position = Vector2(1.5258789e-05, -3.8146973e-06)
+scale = Vector2(0.72, 0.72)
+texture = ExtResource("1_yux0p")
+
+[node name="Main Menu" type="Node" parent="." unique_id=1487204788]
+
+[node name="Credits Button" type="Node" parent="Main Menu" unique_id=1527902838]
+
+[node name="Credits area" type="Area2D" parent="Main Menu/Credits Button" unique_id=1551025765]
+position = Vector2(1.5258789e-05, -3.8146973e-06)
+scale = Vector2(0.72, 0.72)
+script = ExtResource("2_rt6rt")
+
+[node name="Collision Shape" type="CollisionShape2D" parent="Main Menu/Credits Button/Credits area" unique_id=2080534014]
+position = Vector2(-613.8889, 388.88898)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_k3i67")
+
+[connection signal="mouse_entered" from="Main Menu/Credits Button/Credits area" to="Main Menu/Credits Button/Credits area" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Main Menu/Credits Button/Credits area" to="Main Menu/Credits Button/Credits area" method="_on_mouse_exited"]
