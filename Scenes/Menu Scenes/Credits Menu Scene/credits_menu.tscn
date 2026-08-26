@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b8401fi5meq4j"]
 
-[ext_resource type="Texture2D" uid="uid://berpqfogvntde" path="res://Scenes/Menu Scenes/Credits Menu Scene/temp credits.png" id="1_kdv4w"]
+[ext_resource type="Texture2D" uid="uid://berpqfogvntde" path="res://Assets/Menus Assets/temp credits.png" id="1_kdv4w"]
 
 [node name="Credits Menu Root" type="Node2D" unique_id=386903939]
 

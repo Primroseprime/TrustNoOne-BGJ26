@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://berpqfogvntde"
-path="res://.godot/imported/temp credits.png-5deea849e0634893582eb29c8ab29499.ctex"
+uid="uid://de67irbi61q7g"
+path="res://.godot/imported/Temp-Office Background.png-4b2cfbeda3de40909f22e1e8c591659b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Menu Scenes/Credits Menu Scene/temp credits.png"
-dest_files=["res://.godot/imported/temp credits.png-5deea849e0634893582eb29c8ab29499.ctex"]
+source_file="res://Assets/Office Assets/Temp-Office Background.png"
+dest_files=["res://.godot/imported/Temp-Office Background.png-4b2cfbeda3de40909f22e1e8c591659b.ctex"]
 
 [params]
 

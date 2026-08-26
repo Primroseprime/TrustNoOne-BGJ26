@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://de67irbi61q7g"
-path="res://.godot/imported/Temp-Office Background.png-d1c7dfe8ed6d0dd875dde82bd17aa892.ctex"
+uid="uid://berpqfogvntde"
+path="res://.godot/imported/temp credits.png-0ea0e5fc303aad9744015d1eaca23097.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Office Scenes/Office Scene/Temp-Office Background.png"
-dest_files=["res://.godot/imported/Temp-Office Background.png-d1c7dfe8ed6d0dd875dde82bd17aa892.ctex"]
+source_file="res://Assets/Menus Assets/temp credits.png"
+dest_files=["res://.godot/imported/temp credits.png-0ea0e5fc303aad9744015d1eaca23097.ctex"]
 
 [params]
 
