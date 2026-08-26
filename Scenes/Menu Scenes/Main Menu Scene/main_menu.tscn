@@ -3,9 +3,13 @@
 [ext_resource type="Script" uid="uid://ch2uc6t8yn0ty" path="res://Scenes/Menu Scenes/Menus.gd" id="1_k3i67"]
 [ext_resource type="Texture2D" uid="uid://b10v5f0juvfi7" path="res://Scenes/Menu Scenes/Main Menu Scene/Main Menu Temp.png" id="1_yux0p"]
 [ext_resource type="Script" uid="uid://bq4w4fvq3yukt" path="res://Scenes/Menu Scenes/Main Menu Scene/credits button.gd" id="2_rt6rt"]
+[ext_resource type="Script" uid="uid://b65qxouqv483p" path="res://Scenes/Menu Scenes/Main Menu Scene/quit_button.gd" id="4_ncuy8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k3i67"]
 size = Vector2(355.5555, 102.77785)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ue3lg"]
+size = Vector2(345, 111)
 
 [node name="Menu Root" type="Node2D" unique_id=1418669982]
 script = ExtResource("1_k3i67")
@@ -29,5 +33,16 @@ position = Vector2(-613.8889, 388.88898)
 scale = Vector2(1.0000001, 1.0000001)
 shape = SubResource("RectangleShape2D_k3i67")
 
+[node name="Quit Button" type="Node" parent="Main Menu" unique_id=1304950779]
+
+[node name="Quit Area" type="Area2D" parent="Main Menu/Quit Button" unique_id=42544414]
+script = ExtResource("4_ncuy8")
+
+[node name="Collision Shape" type="CollisionShape2D" parent="Main Menu/Quit Button/Quit Area" unique_id=468141970]
+position = Vector2(171.5, -17.5)
+shape = SubResource("RectangleShape2D_ue3lg")
+
 [connection signal="mouse_entered" from="Main Menu/Credits Button/Credits area" to="Main Menu/Credits Button/Credits area" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Main Menu/Credits Button/Credits area" to="Main Menu/Credits Button/Credits area" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Main Menu/Quit Button/Quit Area" to="Main Menu/Quit Button/Quit Area" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Main Menu/Quit Button/Quit Area" to="Main Menu/Quit Button/Quit Area" method="_on_mouse_exited"]
