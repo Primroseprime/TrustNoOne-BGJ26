@@ -15,39 +15,36 @@ func _ready() -> void:
 func Play():
 	pass
 
+# Var for menus
+var Current_Menu = null
+
 # Clicked Options -> Open Options Scene
-var Options_Scene_Instantiated
-var Options_Menu_Open := false
 func Options():
-	Options_Scene_Instantiated = Options_Scene.instantiate()
-	add_child(Options_Scene_Instantiated)
-	Options_Menu_Open = true
+	if Current_Menu != null:
+		return
+	
+	Current_Menu = Options_Scene.instantiate()
+	add_child(Current_Menu)
 	Disable_Main_Menu()
 
 # Clicked Credits -> Open Credit Scene
-var Credits_Scene_Instantiated
-var Credits_Menu_Open := false
 func Credits():
-	Credits_Scene_Instantiated = Credits_Scene.instantiate()
-	add_child(Credits_Scene_Instantiated)
-	Credits_Menu_Open = true
+	if Current_Menu != null:
+		return
+	
+	Current_Menu = Credits_Scene.instantiate()
+	add_child(Current_Menu)
 	Disable_Main_Menu()
 
 # Clicked Quit -> Quit
 func Quit():
 	get_tree().quit()
-
-func _input(event: InputEvent) -> void:
-	# Options Menu Close if 'ESC'
-	if Input.is_action_just_pressed("ESC") and Options_Menu_Open:
-		Options_Scene_Instantiated.queue_free()
-		Options_Menu_Open = false
-		Enable_Main_Menu()
 	
-	# Credits Menu Close if 'ESC'
-	if Input.is_action_just_pressed("ESC") and Credits_Menu_Open:
-		Credits_Scene_Instantiated.queue_free()
-		Credits_Menu_Open = false
+	# Menu Close if 'ESC'
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("ESC") and Current_Menu != null:
+		Current_Menu.queue_free()
+		Current_Menu = null
 		Enable_Main_Menu()
 
 # Disable Main Menu Button while other menu open
