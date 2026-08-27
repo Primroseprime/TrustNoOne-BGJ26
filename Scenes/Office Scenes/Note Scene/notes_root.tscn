@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://j8my61f7tygl" path="res://Assets/icon.svg" id="1_33ifb"]
 
 [node name="Notes Root" type="Node2D" unique_id=1149129929]
+z_index = 1
 
 [node name="Background" type="Sprite2D" parent="." unique_id=465234204]
 modulate = Color(1, 1, 1, 0.49019608)

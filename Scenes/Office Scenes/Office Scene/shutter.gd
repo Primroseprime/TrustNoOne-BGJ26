@@ -13,7 +13,7 @@ func _on_mouse_exited() -> void:
 
 # When Clicking Shutter Button -> Switch shutter state (var Shutter_Closed)
 func _input(event: InputEvent) -> void:
-	if Input.is_action_just_pressed("Left Click") and is_hovering:
+	if event.is_action_pressed("Left Click") and is_hovering:
 		Shutter_closed = !Shutter_closed
 		Shutter_Animation()
 
@@ -21,8 +21,6 @@ func _input(event: InputEvent) -> void:
 
 # Var for sprite
 var Shutter_closed := false
-
-var SPEED := 1.0
 
 # Sprite Movement
 func Shutter_Animation():

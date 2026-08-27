@@ -4,13 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://de67irbi61q7g" path="res://Assets/Office Assets/Temp-Office Background.png" id="1_xpyfn"]
 [ext_resource type="Script" uid="uid://hq12832svqie" path="res://Scenes/Office Scenes/Office Scene/shutter.gd" id="2_bbr46"]
 [ext_resource type="Texture2D" uid="uid://j8my61f7tygl" path="res://Assets/icon.svg" id="3_n7dka"]
-[ext_resource type="Script" uid="uid://j0c3ncnhke55" path="res://Scenes/Office Scenes/Note Scene/notes.gd" id="4_1i3p8"]
+[ext_resource type="PackedScene" uid="uid://blsamu8o0bf8l" path="res://Scenes/Universal Scenes/button.tscn" id="5_vufs4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4lxjs"]
 size = Vector2(29, 48)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4rqse"]
-size = Vector2(229, 139)
 
 [node name="Office Root" type="Node2D" unique_id=619687857]
 script = ExtResource("1_bbr46")
@@ -34,16 +31,11 @@ texture = ExtResource("3_n7dka")
 position = Vector2(90.5, 151)
 shape = SubResource("RectangleShape2D_4lxjs")
 
-[node name="Notes" type="Node" parent="." unique_id=188710210]
+[node name="Notes Board" type="Node" parent="." unique_id=188710210]
 
-[node name="Notes area" type="Area2D" parent="Notes" unique_id=609693970]
-script = ExtResource("4_1i3p8")
-
-[node name="Collision Shape" type="CollisionShape2D" parent="Notes/Notes area" unique_id=589900085]
-position = Vector2(19.5, -167.5)
-shape = SubResource("RectangleShape2D_4rqse")
+[node name="Button Area" parent="Notes Board" unique_id=32204986 instance=ExtResource("5_vufs4")]
+position = Vector2(20.000002, -169)
+scale = Vector2(11, 6)
 
 [connection signal="mouse_entered" from="Shutter/Shutter Button Area" to="Shutter/Shutter Button Area" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Shutter/Shutter Button Area" to="Shutter/Shutter Button Area" method="_on_mouse_exited"]
-[connection signal="mouse_entered" from="Notes/Notes area" to="Notes/Notes area" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Notes/Notes area" to="Notes/Notes area" method="_on_mouse_exited"]
