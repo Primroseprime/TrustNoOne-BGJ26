@@ -12,12 +12,23 @@ config_version=5
 
 config/name="Trust No One BGJ26"
 run/main_scene="uid://busrn3geautsy"
-config/features=PackedStringArray("4.7", "Forward Plus")
+config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://Assets/icon.svg"
 
 [display]
 
 window/stretch/mode="canvas_items"
+
+[file_customization]
+
+folder_colors={
+"res://Assets/": "purple",
+"res://Scenes/": "red",
+"res://Scenes/Menu Scenes/": "blue",
+"res://Scenes/Office Scenes/": "orange",
+"res://Scenes/Root Scene/": "pink",
+"res://Scenes/Universal Scenes/": "purple"
+}
 
 [input]
 

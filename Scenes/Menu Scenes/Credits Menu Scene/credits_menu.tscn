@@ -1,10 +1,92 @@
 [gd_scene format=3 uid="uid://b8401fi5meq4j"]
 
-[ext_resource type="Texture2D" uid="uid://berpqfogvntde" path="res://Assets/Menus Assets/temp credits.png" id="1_kdv4w"]
+[ext_resource type="Texture2D" uid="uid://dviuqcyekp2at" path="res://Assets/Text Incasing.png" id="1_a86rl"]
+[ext_resource type="Texture2D" uid="uid://bm1n34qhv203j" path="res://Assets/overlays.png" id="2_8dmge"]
 
 [node name="Credits Menu Root" type="Node2D" unique_id=386903939]
 
-[node name="Credits" type="Sprite2D" parent="." unique_id=930603187]
-position = Vector2(-7.0393085e-05, 2.2530556e-05)
-scale = Vector2(0.7199999, 0.71999997)
-texture = ExtResource("1_kdv4w")
+[node name="Text" type="Node" parent="." unique_id=1971176888]
+
+[node name="Credits Categories" type="Label" parent="Text" unique_id=2093439549]
+z_index = 3
+offset_left = -419.0
+offset_top = -232.0
+offset_right = 429.0
+offset_bottom = -177.0
+theme_override_font_sizes/font_size = 40
+text = "Artists                 Programmer            Composers"
+horizontal_alignment = 1
+
+[node name="Artists Names" type="Label" parent="Text" unique_id=354380352]
+z_index = 3
+offset_left = -479.0
+offset_top = -165.0
+offset_right = -332.0
+offset_bottom = -75.0
+theme_override_font_sizes/font_size = 20
+text = "Primerose
+
+Dalianimations"
+
+[node name="Prgrammer Name" type="Label" parent="Text" unique_id=1751060760]
+z_index = 3
+offset_left = -123.0
+offset_top = -165.0
+offset_right = 24.0
+offset_bottom = -75.0
+theme_override_font_sizes/font_size = 20
+text = "CalGGF"
+
+[node name="Composers Names" type="Label" parent="Text" unique_id=1428211085]
+z_index = 3
+offset_left = 226.0
+offset_top = -165.0
+offset_right = 373.0
+offset_bottom = -13.0
+theme_override_font_sizes/font_size = 20
+text = "Meeklemonkle
+
+Cloud_
+
+Blaster647
+"
+
+[node name="Panels" type="Node" parent="." unique_id=1191217548]
+
+[node name="Panel1" type="Sprite2D" parent="Panels" unique_id=1470399368]
+z_index = 2
+position = Vector2(-350, 0)
+scale = Vector2(0.4, 0.7)
+texture = ExtResource("1_a86rl")
+
+[node name="Panel2" type="Sprite2D" parent="Panels" unique_id=865039641]
+z_index = 2
+rotation = 1.5707964
+scale = Vector2(0.7, 0.4)
+texture = ExtResource("1_a86rl")
+
+[node name="Panel3" type="Sprite2D" parent="Panels" unique_id=951634068]
+z_index = 2
+position = Vector2(350, 0)
+rotation = -3.1415925
+scale = Vector2(0.4, 0.7)
+texture = ExtResource("1_a86rl")
+
+[node name="Background" type="Node" parent="." unique_id=112919629]
+
+[node name="Overlay Top" type="Sprite2D" parent="Background" unique_id=2122978195]
+z_index = 1
+position = Vector2(0, 175)
+scale = Vector2(0.6, 1)
+texture = ExtResource("2_8dmge")
+region_enabled = true
+region_rect = Rect2(0, 0, 1920, 1080)
+
+[node name="Overlay Bottom" type="Sprite2D" parent="Background" unique_id=796172507]
+z_index = 1
+position = Vector2(0, -175)
+rotation = 3.1415927
+scale = Vector2(0.6, 1)
+texture = ExtResource("2_8dmge")
+region_enabled = true
+region_rect = Rect2(0, 0, 1920, 1080)
