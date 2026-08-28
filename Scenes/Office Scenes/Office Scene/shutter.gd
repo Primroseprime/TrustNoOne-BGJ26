@@ -25,14 +25,10 @@ var Shutter_closed := false
 # Sprite Movement
 func Shutter_Animation():
 	
-	# Move shutter to close (pos.y = 125.0)
+	# Recode
 	if Shutter_closed:
-		print($"Shutter Sprite".global_position.y)
-		$"Shutter Sprite".global_position.y += 225.0
-		print($"Shutter Sprite".global_position.y)
+		pass
 	
-	# Move shutter to open (pos.y = 350.0)
+	# Recode
 	elif !Shutter_closed:
-		print($"Shutter Sprite".global_position.y)
-		$"Shutter Sprite".global_position.y -= 225.0
-		print($"Shutter Sprite".global_position.y)
+		pass

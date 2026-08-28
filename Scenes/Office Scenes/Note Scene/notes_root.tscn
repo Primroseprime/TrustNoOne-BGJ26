@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://5a5rmhyy08nb"]
 
-[ext_resource type="Texture2D" uid="uid://j8my61f7tygl" path="res://Assets/icon.svg" id="1_33ifb"]
+[ext_resource type="Texture2D" uid="uid://ca3ipgib45sdq" path="res://Assets/Office Assets/Flat Office Items/office_inside.png" id="1_vmehy"]
 
 [node name="Notes Root" type="Node2D" unique_id=1149129929]
 z_index = 1
 
 [node name="Background" type="Sprite2D" parent="." unique_id=465234204]
-modulate = Color(1, 1, 1, 0.49019608)
-scale = Vector2(8, 4.5)
-texture = ExtResource("1_33ifb")
+position = Vector2(-590.5555, 327.43747)
+scale = Vector2(1.6387502, 1.6387502)
+texture = ExtResource("1_vmehy")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=954564558]

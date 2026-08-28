@@ -1,41 +1,90 @@
 [gd_scene format=3 uid="uid://d7ueom841gag"]
 
 [ext_resource type="Script" uid="uid://c7oaby3d2puuh" path="res://Scenes/Office Scenes/office.gd" id="1_bbr46"]
-[ext_resource type="Texture2D" uid="uid://de67irbi61q7g" path="res://Assets/Office Assets/Temp-Office Background.png" id="1_xpyfn"]
 [ext_resource type="Script" uid="uid://hq12832svqie" path="res://Scenes/Office Scenes/Office Scene/shutter.gd" id="2_bbr46"]
-[ext_resource type="Texture2D" uid="uid://j8my61f7tygl" path="res://Assets/icon.svg" id="3_n7dka"]
-[ext_resource type="PackedScene" uid="uid://blsamu8o0bf8l" path="res://Scenes/Universal Scenes/button.tscn" id="5_vufs4"]
+[ext_resource type="Texture2D" uid="uid://cv1oclsy0aw7e" path="res://Assets/Office Assets/Flat Office Items/office_outside.png" id="2_u6ljo"]
+[ext_resource type="Texture2D" uid="uid://ca3ipgib45sdq" path="res://Assets/Office Assets/Flat Office Items/office_inside.png" id="3_l46ab"]
+[ext_resource type="Texture2D" uid="uid://6se0n0jla7do" path="res://Assets/Office Assets/Flat Office Items/office_glass.png" id="3_tki30"]
+[ext_resource type="Texture2D" uid="uid://cocgp4ylkwsco" path="res://Assets/Office Assets/Flat Office Items/office_shuttersOpen.png" id="4_l46ab"]
+[ext_resource type="Texture2D" uid="uid://1e8xidacn83m" path="res://Assets/Office Assets/Flat Office Items/office_shuttersClosed.png" id="5_g7i5u"]
+[ext_resource type="Texture2D" uid="uid://dyvbce8vxo4fc" path="res://Assets/Office Assets/Flat Office Items/office_speaker.png" id="5_gh1ww"]
+[ext_resource type="Texture2D" uid="uid://bar3xrohd05f8" path="res://Assets/Office Assets/Flat Office Items/office_microphone.png" id="6_0vd08"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_74soc"]
+atlas = ExtResource("4_l46ab")
+region = Rect2(0, 0, 1600, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tki30"]
+atlas = ExtResource("5_g7i5u")
+region = Rect2(0, 0, 1600, 900)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gh1ww"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_74soc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tki30")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4lxjs"]
 size = Vector2(29, 48)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_74soc"]
+
 [node name="Office Root" type="Node2D" unique_id=619687857]
 script = ExtResource("1_bbr46")
 
-[node name="Background" type="Sprite2D" parent="." unique_id=835705051]
-position = Vector2(-2.2888184e-05, -2.3841858e-06)
-scale = Vector2(1.1659919, 0.8459529)
-texture = ExtResource("1_xpyfn")
+[node name="Office Assets" type="Node" parent="." unique_id=2027256085]
+
+[node name="Background" type="Sprite2D" parent="Office Assets" unique_id=835705051]
+position = Vector2(-3.0517578e-05, 60.000015)
+scale = Vector2(1, 0.726)
+texture = ExtResource("2_u6ljo")
+
+[node name="Office" type="Sprite2D" parent="Office Assets" unique_id=832713826]
+position = Vector2(5.531311e-05, -2.5570393e-05)
+scale = Vector2(0.71999997, 0.71999997)
+texture = ExtResource("3_l46ab")
+
+[node name="Glass" type="Sprite2D" parent="Office Assets" unique_id=1206111189]
+position = Vector2(1.6666899, -0.49998856)
+scale = Vector2(0.7233333, 0.7233334)
+texture = ExtResource("3_tki30")
+
+[node name="Speaker" type="Sprite2D" parent="Office Assets" unique_id=172334393]
+position = Vector2(79, -73)
+texture = ExtResource("5_gh1ww")
+
+[node name="Microphone" type="Sprite2D" parent="Office Assets" unique_id=935067727]
+z_index = 1
+position = Vector2(156, -62)
+texture = ExtResource("6_0vd08")
 
 [node name="Shutter" type="Node" parent="." unique_id=853597080]
 
 [node name="Shutter Button Area" type="Area2D" parent="Shutter" unique_id=1950306858]
 script = ExtResource("2_bbr46")
 
-[node name="Shutter Sprite" type="Sprite2D" parent="Shutter/Shutter Button Area" unique_id=263724383]
-position = Vector2(-300, -350.00003)
-scale = Vector2(2.6015625, 1.7578127)
-texture = ExtResource("3_n7dka")
+[node name="Shutter Sprite" type="AnimatedSprite2D" parent="Shutter/Shutter Button Area" unique_id=1013428177]
+position = Vector2(-7.0000143, 7.000041)
+scale = Vector2(0.7075001, 0.6733334)
+sprite_frames = SubResource("SpriteFrames_gh1ww")
+frame_progress = 0.3152963
 
 [node name="Collision Shape" type="CollisionShape2D" parent="Shutter/Shutter Button Area" unique_id=1479526757]
-position = Vector2(90.5, 151)
+position = Vector2(84, 80)
 shape = SubResource("RectangleShape2D_4lxjs")
 
 [node name="Notes Board" type="Node" parent="." unique_id=188710210]
 
-[node name="Button Area" parent="Notes Board" unique_id=32204986 instance=ExtResource("5_vufs4")]
-position = Vector2(20.000002, -169)
-scale = Vector2(11, 6)
+[node name="Notes" type="AnimatedSprite2D" parent="Notes Board" unique_id=2059305387]
+sprite_frames = SubResource("SpriteFrames_74soc")
 
 [connection signal="mouse_entered" from="Shutter/Shutter Button Area" to="Shutter/Shutter Button Area" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Shutter/Shutter Button Area" to="Shutter/Shutter Button Area" method="_on_mouse_exited"]
