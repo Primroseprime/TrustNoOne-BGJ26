@@ -25,10 +25,10 @@ var Shutter_closed := false
 # Sprite Movement
 func Shutter_Animation():
 	
-	# Recode
+	# Close Shutter
 	if Shutter_closed:
-		pass
+		$"Shutter Sprite".frame = 1
 	
-	# Recode
+	# Open Shutter
 	elif !Shutter_closed:
-		pass
+		$"Shutter Sprite".frame = 0

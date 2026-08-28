@@ -43,7 +43,7 @@ script = ExtResource("1_bbr46")
 [node name="Office Assets" type="Node" parent="." unique_id=2027256085]
 
 [node name="Background" type="Sprite2D" parent="Office Assets" unique_id=835705051]
-position = Vector2(-3.0517578e-05, 60.000015)
+position = Vector2(2.9999695, 60.000015)
 scale = Vector2(1, 0.726)
 texture = ExtResource("2_u6ljo")
 
