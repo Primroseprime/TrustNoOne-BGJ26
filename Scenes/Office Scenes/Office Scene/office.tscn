@@ -8,7 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://cocgp4ylkwsco" path="res://Assets/Office Assets/Flat Office Items/office_shuttersOpen.png" id="4_l46ab"]
 [ext_resource type="Texture2D" uid="uid://1e8xidacn83m" path="res://Assets/Office Assets/Flat Office Items/office_shuttersClosed.png" id="5_g7i5u"]
 [ext_resource type="Texture2D" uid="uid://dyvbce8vxo4fc" path="res://Assets/Office Assets/Flat Office Items/office_speaker.png" id="5_gh1ww"]
+[ext_resource type="PackedScene" uid="uid://blsamu8o0bf8l" path="res://Scenes/Universal Scenes/button.tscn" id="5_vufs4"]
 [ext_resource type="Texture2D" uid="uid://bar3xrohd05f8" path="res://Assets/Office Assets/Flat Office Items/office_microphone.png" id="6_0vd08"]
+[ext_resource type="Texture2D" uid="uid://cdq36le06piyi" path="res://Assets/Office Assets/Buttons.png" id="7_frtst"]
 [ext_resource type="Texture2D" uid="uid://bhr635prs15mo" path="res://Assets/Office Assets/Flat Office Items/Notes.png" id="10_tki30"]
 [ext_resource type="Script" uid="uid://c45csev3xuwde" path="res://Scenes/Office Scenes/Office Scene/notes.gd" id="11_gh1ww"]
 
@@ -35,7 +37,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4lxjs"]
-size = Vector2(29, 48)
+size = Vector2(104, 26)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gh1ww"]
 atlas = ExtResource("10_tki30")
@@ -103,19 +105,33 @@ z_index = 1
 position = Vector2(156, -62)
 texture = ExtResource("6_0vd08")
 
-[node name="Shutter" type="Node" parent="." unique_id=853597080]
+[node name="Buttons" type="Node" parent="." unique_id=173700270]
 
-[node name="Shutter Button Area" type="Area2D" parent="Shutter" unique_id=1950306858]
+[node name="Buttons" type="Sprite2D" parent="Buttons" unique_id=1986084336]
+position = Vector2(110, 91)
+texture = ExtResource("7_frtst")
+
+[node name="Button Open" parent="Buttons" unique_id=32204986 instance=ExtResource("5_vufs4")]
+position = Vector2(67, 65)
+scale = Vector2(2, 2)
+
+[node name="Button Close" parent="Buttons" unique_id=1208901876 instance=ExtResource("5_vufs4")]
+position = Vector2(124, 63)
+scale = Vector2(2, 2)
+
+[node name="Shutter" type="Node" parent="Buttons" unique_id=853597080]
+
+[node name="Shutter Button Area" type="Area2D" parent="Buttons/Shutter" unique_id=1950306858]
 script = ExtResource("2_bbr46")
 
-[node name="Shutter Sprite" type="AnimatedSprite2D" parent="Shutter/Shutter Button Area" unique_id=1013428177]
+[node name="Shutter Sprite" type="AnimatedSprite2D" parent="Buttons/Shutter/Shutter Button Area" unique_id=1013428177]
 position = Vector2(-7.0000143, 7.000041)
 scale = Vector2(0.7075001, 0.6733334)
 sprite_frames = SubResource("SpriteFrames_gh1ww")
 frame_progress = 0.3152963
 
-[node name="Collision Shape" type="CollisionShape2D" parent="Shutter/Shutter Button Area" unique_id=1479526757]
-position = Vector2(84, 80)
+[node name="Collision Shape" type="CollisionShape2D" parent="Buttons/Shutter/Shutter Button Area" unique_id=1479526757]
+position = Vector2(109, 130)
 shape = SubResource("RectangleShape2D_4lxjs")
 
 [node name="Notes Board" type="Node" parent="." unique_id=188710210]
@@ -166,5 +182,5 @@ to their new skin."
 
 [node name="Mic" type="Node" parent="." unique_id=1650696994]
 
-[connection signal="mouse_entered" from="Shutter/Shutter Button Area" to="Shutter/Shutter Button Area" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Shutter/Shutter Button Area" to="Shutter/Shutter Button Area" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Buttons/Shutter/Shutter Button Area" to="Buttons/Shutter/Shutter Button Area" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Shutter/Shutter Button Area" to="Buttons/Shutter/Shutter Button Area" method="_on_mouse_exited"]
