@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d7ueom841gag"]
 
-[ext_resource type="Script" uid="uid://c7oaby3d2puuh" path="res://Scenes/Office Scenes/office.gd" id="1_bbr46"]
+[ext_resource type="Script" uid="uid://c7oaby3d2puuh" path="res://Scenes/Office Scenes/Mic/office.gd" id="1_bbr46"]
 [ext_resource type="Script" uid="uid://hq12832svqie" path="res://Scenes/Office Scenes/Office Scene/shutter.gd" id="2_bbr46"]
 [ext_resource type="Texture2D" uid="uid://cv1oclsy0aw7e" path="res://Assets/Office Assets/Flat Office Items/office_outside.png" id="2_u6ljo"]
 [ext_resource type="Texture2D" uid="uid://ca3ipgib45sdq" path="res://Assets/Office Assets/Flat Office Items/office_inside.png" id="3_l46ab"]
@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://1e8xidacn83m" path="res://Assets/Office Assets/Flat Office Items/office_shuttersClosed.png" id="5_g7i5u"]
 [ext_resource type="Texture2D" uid="uid://dyvbce8vxo4fc" path="res://Assets/Office Assets/Flat Office Items/office_speaker.png" id="5_gh1ww"]
 [ext_resource type="Texture2D" uid="uid://bar3xrohd05f8" path="res://Assets/Office Assets/Flat Office Items/office_microphone.png" id="6_0vd08"]
-[ext_resource type="Texture2D" uid="uid://bhr635prs15mo" path="res://Assets/Office Assets/Notes.png" id="10_tki30"]
+[ext_resource type="Texture2D" uid="uid://bhr635prs15mo" path="res://Assets/Office Assets/Flat Office Items/Notes.png" id="10_tki30"]
 [ext_resource type="Script" uid="uid://c45csev3xuwde" path="res://Scenes/Office Scenes/Office Scene/notes.gd" id="11_gh1ww"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_74soc"]
@@ -163,6 +163,8 @@ sometimes make
 weird movements.
 Maybe adjusting
 to their new skin."
+
+[node name="Mic" type="Node" parent="." unique_id=1650696994]
 
 [connection signal="mouse_entered" from="Shutter/Shutter Button Area" to="Shutter/Shutter Button Area" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Shutter/Shutter Button Area" to="Shutter/Shutter Button Area" method="_on_mouse_exited"]

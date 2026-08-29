@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bhr635prs15mo"
-path="res://.godot/imported/Notes.png-60985193a687fa4c9b89ffb2a24e7178.ctex"
+path="res://.godot/imported/Notes.png-5082d8daf7565447da481d731b4239a8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Office Assets/Notes.png"
-dest_files=["res://.godot/imported/Notes.png-60985193a687fa4c9b89ffb2a24e7178.ctex"]
+source_file="res://Assets/Office Assets/Flat Office Items/Notes.png"
+dest_files=["res://.godot/imported/Notes.png-5082d8daf7565447da481d731b4239a8.ctex"]
 
 [params]
 

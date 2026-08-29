@@ -1,10 +1,12 @@
 extends AnimatedSprite2D
 
+# Sets empty text when starting
 func _ready() -> void:
 	$"Note 1".text = " "
 	$"Note 2".text = " "
 	$"Note 3".text = ""
 
+# Adds note when called
 func Add_Note():
 	self.frame += 1
 	
