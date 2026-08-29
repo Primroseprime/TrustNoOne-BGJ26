@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bjerqngsdw1v5"
+path="res://.godot/imported/detective song.mp3-581d4c840c91a61536f9abe236276dbc.mp3str"
+
+[deps]
+
+source_file="res://Sound/detective song.mp3"
+dest_files=["res://.godot/imported/detective song.mp3-581d4c840c91a61536f9abe236276dbc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
