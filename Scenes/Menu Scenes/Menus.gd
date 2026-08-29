@@ -59,3 +59,9 @@ func Enable_Main_Menu():
 	$"Main Menu/Options Button/Button Area".input_pickable = true
 	$"Main Menu/Credits Button/Button Area".input_pickable = true
 	$"Main Menu/Quit Button/Button Area".input_pickable = true
+
+func Reset_Buttons():
+	$"Main Menu/Play Button/Button Area".is_hovering = false
+	$"Main Menu/Options Button/Button Area".is_hovering = false
+	$"Main Menu/Credits Button/Button Area".is_hovering = false
+	$"Main Menu/Quit Button/Button Area".is_hovering = false

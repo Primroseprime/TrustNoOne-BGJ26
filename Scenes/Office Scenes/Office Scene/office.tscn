@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://1e8xidacn83m" path="res://Assets/Office Assets/Flat Office Items/office_shuttersClosed.png" id="5_g7i5u"]
 [ext_resource type="Texture2D" uid="uid://dyvbce8vxo4fc" path="res://Assets/Office Assets/Flat Office Items/office_speaker.png" id="5_gh1ww"]
 [ext_resource type="Texture2D" uid="uid://bar3xrohd05f8" path="res://Assets/Office Assets/Flat Office Items/office_microphone.png" id="6_0vd08"]
+[ext_resource type="Texture2D" uid="uid://bhr635prs15mo" path="res://Assets/Office Assets/Notes.png" id="10_tki30"]
+[ext_resource type="Script" uid="uid://c45csev3xuwde" path="res://Scenes/Office Scenes/Office Scene/notes.gd" id="11_gh1ww"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_74soc"]
 atlas = ExtResource("4_l46ab")
@@ -35,7 +37,41 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4lxjs"]
 size = Vector2(29, 48)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_gh1ww"]
+atlas = ExtResource("10_tki30")
+region = Rect2(0, 0, 377, 279)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0vd08"]
+atlas = ExtResource("10_tki30")
+region = Rect2(377, 0, 377, 279)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_frtst"]
+atlas = ExtResource("10_tki30")
+region = Rect2(754, 0, 377, 279)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g48yj"]
+atlas = ExtResource("10_tki30")
+region = Rect2(1131, 0, 377, 279)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_74soc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gh1ww")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0vd08")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_frtst")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g48yj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
 
 [node name="Office Root" type="Node2D" unique_id=619687857]
 script = ExtResource("1_bbr46")
@@ -43,6 +79,7 @@ script = ExtResource("1_bbr46")
 [node name="Office Assets" type="Node" parent="." unique_id=2027256085]
 
 [node name="Background" type="Sprite2D" parent="Office Assets" unique_id=835705051]
+z_index = -2
 position = Vector2(2.9999695, 60.000015)
 scale = Vector2(1, 0.726)
 texture = ExtResource("2_u6ljo")
@@ -84,7 +121,48 @@ shape = SubResource("RectangleShape2D_4lxjs")
 [node name="Notes Board" type="Node" parent="." unique_id=188710210]
 
 [node name="Notes" type="AnimatedSprite2D" parent="Notes Board" unique_id=2059305387]
+position = Vector2(296, -154)
 sprite_frames = SubResource("SpriteFrames_74soc")
+frame_progress = 0.3241783
+script = ExtResource("11_gh1ww")
+
+[node name="Note 1" type="Label" parent="Notes Board/Notes" unique_id=183634572]
+offset_left = -166.0
+offset_top = 27.0
+offset_right = -21.0
+offset_bottom = 109.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "They may 
+give wrong 
+awnsers
+to your
+questions."
+
+[node name="Note 2" type="Label" parent="Notes Board/Notes" unique_id=615067718]
+offset_left = -135.0
+offset_top = -97.0
+offset_right = 10.0
+offset_bottom = -15.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 9
+text = "They're asnwers
+may change 
+after repeated 
+questions."
+
+[node name="Note 3" type="Label" parent="Notes Board/Notes" unique_id=1364842269]
+offset_left = 22.0
+offset_top = -71.0
+offset_right = 167.0
+offset_bottom = 11.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 9
+text = "They seem to
+sometimes make
+weird movements.
+Maybe adjusting
+to their new skin."
 
 [connection signal="mouse_entered" from="Shutter/Shutter Button Area" to="Shutter/Shutter Button Area" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Shutter/Shutter Button Area" to="Shutter/Shutter Button Area" method="_on_mouse_exited"]
