@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dkfthowlseilp"]
+
+[ext_resource type="Script" uid="uid://c3bx636mbaq7i" path="res://Scenes/Characters/people.gd" id="1_p8rwv"]
+
+[node name="People Root" type="Node2D" unique_id=1396040596]
+script = ExtResource("1_p8rwv")

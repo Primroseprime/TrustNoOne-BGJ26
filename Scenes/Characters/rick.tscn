@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://dthi7v8q6bu84"]
+
+[node name="Rick Root" type="Node2D" unique_id=1434926633]
+z_index = -1

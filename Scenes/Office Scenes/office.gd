@@ -24,3 +24,7 @@ func Add_Note():
 	if Note_Amount < 3:
 		Note_Amount += 1
 		$"Notes Board/Notes".Add_Note()
+
+#
+# Characters Scripts
+#

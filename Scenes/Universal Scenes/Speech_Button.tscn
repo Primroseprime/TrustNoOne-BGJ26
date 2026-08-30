@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://kwniihpmcq1s"]
+
+[ext_resource type="Texture2D" uid="uid://dviuqcyekp2at" path="res://Assets/Text Incasing.png" id="1_n81wb"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mui3j"]
+content_margin_left = 5.0
+content_margin_top = 0.0
+content_margin_right = 5.0
+content_margin_bottom = 0.0
+texture = ExtResource("1_n81wb")
+
+[node name="Speech Bubble Root" type="Node2D" unique_id=1012638228]
+z_index = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=114863779]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_mui3j")
+
+[node name="Button" type="Button" parent="PanelContainer" unique_id=254967233]
+layout_mode = 2
+action_mode = 0
+
+[node name="Label" type="Label" parent="PanelContainer" unique_id=170274053]
+layout_mode = 2

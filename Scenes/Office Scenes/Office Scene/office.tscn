@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d7ueom841gag"]
 
-[ext_resource type="Script" uid="uid://c7oaby3d2puuh" path="res://Scenes/Office Scenes/Mic/office.gd" id="1_bbr46"]
+[ext_resource type="Script" uid="uid://c7oaby3d2puuh" path="res://Scenes/Office Scenes/office.gd" id="1_bbr46"]
 [ext_resource type="Script" uid="uid://hq12832svqie" path="res://Scenes/Office Scenes/Office Scene/shutter.gd" id="2_bbr46"]
 [ext_resource type="Texture2D" uid="uid://cv1oclsy0aw7e" path="res://Assets/Office Assets/Flat Office Items/office_outside.png" id="2_u6ljo"]
 [ext_resource type="Texture2D" uid="uid://ca3ipgib45sdq" path="res://Assets/Office Assets/Flat Office Items/office_inside.png" id="3_l46ab"]
@@ -15,6 +15,7 @@
 [ext_resource type="Script" uid="uid://c45csev3xuwde" path="res://Scenes/Office Scenes/Office Scene/notes.gd" id="11_gh1ww"]
 [ext_resource type="AudioStream" uid="uid://c0hxlngjlemot" path="res://Sound/Sounds/button click.mp3" id="12_2fhsi"]
 [ext_resource type="AudioStream" uid="uid://b32w44dy6m6un" path="res://Sound/Music/detective song.mp3" id="14_g48yj"]
+[ext_resource type="PackedScene" uid="uid://dkfthowlseilp" path="res://Scenes/Characters/people.tscn" id="16_biq6s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_74soc"]
 atlas = ExtResource("4_l46ab")
@@ -107,6 +108,12 @@ z_index = 1
 position = Vector2(156, -62)
 texture = ExtResource("6_0vd08")
 
+[node name="Music" type="AudioStreamPlayer2D" parent="Office Assets" unique_id=1333240928]
+stream = ExtResource("14_g48yj")
+volume_db = -20.0
+autoplay = true
+parameters/looping = true
+
 [node name="Buttons" type="Node" parent="." unique_id=173700270]
 
 [node name="Buttons" type="Sprite2D" parent="Buttons" unique_id=1986084336]
@@ -185,13 +192,9 @@ weird movements.
 Maybe adjusting
 to their new skin."
 
-[node name="Mic" type="Node" parent="." unique_id=1650696994]
+[node name="Character Interactions" type="Node" parent="." unique_id=978305742]
 
-[node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=1333240928]
-stream = ExtResource("14_g48yj")
-volume_db = -20.0
-autoplay = true
-parameters/looping = true
+[node name="People Root" parent="Character Interactions" unique_id=1396040596 instance=ExtResource("16_biq6s")]
 
 [connection signal="mouse_entered" from="Buttons/Shutter/Shutter Button Area" to="Buttons/Shutter/Shutter Button Area" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Buttons/Shutter/Shutter Button Area" to="Buttons/Shutter/Shutter Button Area" method="_on_mouse_exited"]

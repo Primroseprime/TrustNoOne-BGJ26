@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://bmkva4vsp8w0s"]
+
+[ext_resource type="Texture2D" uid="uid://cnwl4327pkac6" path="res://Assets/Characters/annie-0.png" id="1_54vxs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ej0us"]
+atlas = ExtResource("1_54vxs")
+region = Rect2(0, 0, 1920, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ehtcv"]
+atlas = ExtResource("1_54vxs")
+region = Rect2(3840, 0, 1920, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mtwwl"]
+atlas = ExtResource("1_54vxs")
+region = Rect2(1920, 0, 1920, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0qoot"]
+atlas = ExtResource("1_54vxs")
+region = Rect2(5760, 0, 1920, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t150a"]
+atlas = ExtResource("1_54vxs")
+region = Rect2(0, 1080, 1920, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3giw0"]
+atlas = ExtResource("1_54vxs")
+region = Rect2(1920, 1080, 1920, 1080)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cqa43"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ej0us")
+}],
+"loop": true,
+"name": &"Happy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ehtcv")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mtwwl")
+}],
+"loop": true,
+"name": &"Sad",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0qoot")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t150a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3giw0")
+}],
+"loop": true,
+"name": &"Talking",
+"speed": 5.0
+}]
+
+[node name="Annie Root" type="Node2D" unique_id=1127173034]
+z_index = -1
+
+[node name="Sprites" type="AnimatedSprite2D" parent="." unique_id=1945584106]
+z_index = -1
+sprite_frames = SubResource("SpriteFrames_cqa43")
+animation = &"Idle"
