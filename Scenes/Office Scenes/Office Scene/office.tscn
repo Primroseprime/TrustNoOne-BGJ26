@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://cdq36le06piyi" path="res://Assets/Office Assets/Buttons.png" id="7_frtst"]
 [ext_resource type="Texture2D" uid="uid://bhr635prs15mo" path="res://Assets/Office Assets/Flat Office Items/Notes.png" id="10_tki30"]
 [ext_resource type="Script" uid="uid://c45csev3xuwde" path="res://Scenes/Office Scenes/Office Scene/notes.gd" id="11_gh1ww"]
+[ext_resource type="AudioStream" uid="uid://b32w44dy6m6un" path="res://Sound/Music/detective song.mp3" id="14_g48yj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_74soc"]
 atlas = ExtResource("4_l46ab")
@@ -181,6 +182,12 @@ Maybe adjusting
 to their new skin."
 
 [node name="Mic" type="Node" parent="." unique_id=1650696994]
+
+[node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=1333240928]
+stream = ExtResource("14_g48yj")
+volume_db = -20.0
+autoplay = true
+parameters/looping = true
 
 [connection signal="mouse_entered" from="Buttons/Shutter/Shutter Button Area" to="Buttons/Shutter/Shutter Button Area" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Buttons/Shutter/Shutter Button Area" to="Buttons/Shutter/Shutter Button Area" method="_on_mouse_exited"]

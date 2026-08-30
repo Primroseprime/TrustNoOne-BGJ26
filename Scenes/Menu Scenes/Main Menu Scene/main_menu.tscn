@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://ch2uc6t8yn0ty" path="res://Scenes/Menu Scenes/Menus.gd" id="1_k3i67"]
 [ext_resource type="Texture2D" uid="uid://b10v5f0juvfi7" path="res://Assets/Menus Assets/Main Menu Temp.png" id="1_yux0p"]
 [ext_resource type="PackedScene" uid="uid://blsamu8o0bf8l" path="res://Scenes/Universal Scenes/button.tscn" id="3_k3i67"]
+[ext_resource type="AudioStream" uid="uid://ce6mknyosl8d0" path="res://Sound/Music/Desolate.mp3" id="4_ncuy8"]
 
 [node name="Menu Root" type="Node2D" unique_id=1418669982]
 script = ExtResource("1_k3i67")
@@ -37,3 +38,9 @@ scale = Vector2(12.5, 3.4)
 [node name="Button Area" parent="Main Menu/Quit Button" unique_id=710831613 instance=ExtResource("3_k3i67")]
 position = Vector2(171.99998, -17.000002)
 scale = Vector2(17, 5.5)
+
+[node name="Menu Music" type="AudioStreamPlayer2D" parent="." unique_id=1333735245]
+stream = ExtResource("4_ncuy8")
+volume_db = -20.0
+autoplay = true
+parameters/looping = true
