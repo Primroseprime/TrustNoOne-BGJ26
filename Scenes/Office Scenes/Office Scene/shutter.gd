@@ -1,6 +1,8 @@
 extends Area2D
 
+#
 # Button Script
+#
 
 # Var for button
 var is_hovering := false
@@ -15,9 +17,12 @@ func _on_mouse_exited() -> void:
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Left Click") and is_hovering:
 		Shutter_closed = !Shutter_closed
+		$"Button SFX".play()
 		Shutter_Animation()
 
+#
 # Sprite Script
+#
 
 # Var for sprite
 var Shutter_closed := false

@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://cdq36le06piyi" path="res://Assets/Office Assets/Buttons.png" id="7_frtst"]
 [ext_resource type="Texture2D" uid="uid://bhr635prs15mo" path="res://Assets/Office Assets/Flat Office Items/Notes.png" id="10_tki30"]
 [ext_resource type="Script" uid="uid://c45csev3xuwde" path="res://Scenes/Office Scenes/Office Scene/notes.gd" id="11_gh1ww"]
+[ext_resource type="AudioStream" uid="uid://c0hxlngjlemot" path="res://Sound/Sounds/button click.mp3" id="12_2fhsi"]
 [ext_resource type="AudioStream" uid="uid://b32w44dy6m6un" path="res://Sound/Music/detective song.mp3" id="14_g48yj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_74soc"]
@@ -134,6 +135,9 @@ frame_progress = 0.3152963
 [node name="Collision Shape" type="CollisionShape2D" parent="Buttons/Shutter/Shutter Button Area" unique_id=1479526757]
 position = Vector2(109, 130)
 shape = SubResource("RectangleShape2D_4lxjs")
+
+[node name="Button SFX" type="AudioStreamPlayer2D" parent="Buttons/Shutter/Shutter Button Area" unique_id=622793551]
+stream = ExtResource("12_2fhsi")
 
 [node name="Notes Board" type="Node" parent="." unique_id=188710210]
 
